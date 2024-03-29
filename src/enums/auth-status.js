@@ -1,0 +1,6 @@
+const AUTH_STATUS = {
+  UNAUTHORIZED: "UNAUTHORIZED",
+  AUTHORIZED: "AUTHORIZED",
+};
+
+export default AUTH_STATUS;

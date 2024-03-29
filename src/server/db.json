@@ -1,0 +1,244 @@
+{
+  "user-events": [
+    {
+      "id": "4",
+      "event_name": "High Jump",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 13:00:00",
+      "end_time": "2022-12-17 14:00:00"
+    },
+    {
+      "id": "3",
+      "event_name": "Freestyle 400M",
+      "event_category": "Swimming",
+      "start_time": "2022-12-17 15:00:00",
+      "end_time": "2022-12-17 16:00:00"
+    }
+  ],
+  "all-events": [
+    {
+      "id": "1",
+      "event_name": "Butterfly 100M",
+      "event_category": "Swimming",
+      "start_time": "2022-12-17 13:00:00",
+      "end_time": "2022-12-17 14:00:00"
+    },
+    {
+      "id": "2",
+      "event_name": "Backstroke 100M",
+      "event_category": "Swimming",
+      "start_time": "2022-12-17 13:30:00",
+      "end_time": "2022-12-17 14:30:00"
+    },
+    {
+      "id": "3",
+      "event_name": "Freestyle 400M",
+      "event_category": "Swimming",
+      "start_time": "2022-12-17 15:00:00",
+      "end_time": "2022-12-17 16:00:00"
+    },
+    {
+      "id": "4",
+      "event_name": "High Jump",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 13:00:00",
+      "end_time": "2022-12-17 14:00:00"
+    },
+    {
+      "id": "5",
+      "event_name": "Triple Jump",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 16:00:00",
+      "end_time": "2022-12-17 17:00:00"
+    },
+    {
+      "id": "6",
+      "event_name": "Long Jump",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 17:00:00",
+      "end_time": "2022-12-17 18:00:00"
+    },
+    {
+      "id": "7",
+      "event_name": "100M Sprint",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 17:00:00",
+      "end_time": "2022-12-17 18:00:00"
+    },
+    {
+      "id": "8",
+      "event_name": "Lightweight 60kg",
+      "event_category": "Boxing",
+      "start_time": "2022-12-17 18:00:00",
+      "end_time": "2022-12-17 19:00:00"
+    },
+    {
+      "id": "9",
+      "event_name": "Middleweight 75 kg",
+      "event_category": "Boxing",
+      "start_time": "2022-12-17 19:00:00",
+      "end_time": "2022-12-17 20:00:00"
+    },
+    {
+      "id": "10",
+      "event_name": "Heavyweight 91kg",
+      "event_category": "Boxing",
+      "start_time": "2022-12-17 20:00:00",
+      "end_time": "2022-12-17 22:00:00"
+    },
+    {
+      "id": "11",
+      "event_name": "Relay 4x100M",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 13:00:00",
+      "end_time": "2022-12-17 14:00:00"
+    },
+    {
+      "id": "12",
+      "event_name": "Shot Put",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 13:30:00",
+      "end_time": "2022-12-17 14:30:00"
+    },
+    {
+      "id": "13",
+      "event_name": "Hurdles 110M",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 15:00:00",
+      "end_time": "2022-12-17 16:00:00"
+    },
+    {
+      "id": "14",
+      "event_name": "Javelin Throw",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 13:00:00",
+      "end_time": "2022-12-17 14:00:00"
+    },
+    {
+      "id": "15",
+      "event_name": "Race Walk 20KM",
+      "event_category": "Athletics",
+      "start_time": "2022-12-17 16:00:00",
+      "end_time": "2022-12-17 17:00:00"
+    },
+    {
+      "id": "16",
+      "event_name": "10M Air Pistol",
+      "event_category": "Shooting",
+      "start_time": "2022-12-17 17:00:00",
+      "end_time": "2022-12-17 18:00:00"
+    },
+    {
+      "id": "17",
+      "event_name": "10M Air Rifle",
+      "event_category": "Shooting",
+      "start_time": "2022-12-17 17:00:00",
+      "end_time": "2022-12-17 18:00:00"
+    },
+    {
+      "id": "18",
+      "event_name": "Singles",
+      "event_category": "Badminton",
+      "start_time": "2022-12-17 18:00:00",
+      "end_time": "2022-12-17 19:00:00"
+    },
+    {
+      "id": "19",
+      "event_name": "Doubles",
+      "event_category": "Badminton",
+      "start_time": "2022-12-17 19:00:00",
+      "end_time": "2022-12-17 20:00:00"
+    },
+    {
+      "id": "20",
+      "event_name": "Individual",
+      "event_category": "Archery",
+      "start_time": "2022-12-17 20:00:00",
+      "end_time": "2022-12-17 22:00:00"
+    },
+    {
+      "id": "21",
+      "event_name": "Team",
+      "event_category": "Archery",
+      "start_time": "2022-12-17 22:00:00",
+      "end_time": "2022-12-17 23:00:00"
+    },
+    {
+      "id": "22",
+      "event_name": "Singles",
+      "event_category": "Tennis",
+      "start_time": "2022-12-17 18:00:00",
+      "end_time": "2022-12-17 19:00:00"
+    },
+    {
+      "id": "23",
+      "event_name": "Doubles",
+      "event_category": "Tennis",
+      "start_time": "2022-12-17 19:00:00",
+      "end_time": "2022-12-17 20:00:00"
+    },
+    {
+      "id": "24",
+      "event_name": "Singles",
+      "event_category": "Table Tennis",
+      "start_time": "2022-12-17 18:00:00",
+      "end_time": "2022-12-17 19:00:00"
+    },
+    {
+      "id": "25",
+      "event_name": "Doubles",
+      "event_category": "Table Tennis",
+      "start_time": "2022-12-17 19:00:00",
+      "end_time": "2022-12-17 20:00:00"
+    },
+    {
+      "id": "26",
+      "event_name": "Men Football",
+      "event_category": "Football",
+      "start_time": "2022-12-17 17:00:00",
+      "end_time": "2022-12-17 18:00:00"
+    },
+    {
+      "id": "27",
+      "event_name": "Women Football",
+      "event_category": "Football",
+      "start_time": "2022-12-17 17:00:00",
+      "end_time": "2022-12-17 18:00:00"
+    },
+    {
+      "id": "28",
+      "event_name": "Squash",
+      "event_category": "Squash",
+      "start_time": "2022-12-17 18:00:00",
+      "end_time": "2022-12-17 19:00:00"
+    },
+    {
+      "id": "29",
+      "event_name": "Men Basketball",
+      "event_category": "Basketball",
+      "start_time": "2022-12-17 19:00:00",
+      "end_time": "2022-12-17 20:00:00"
+    },
+    {
+      "id": "30",
+      "event_name": "Women Basketball",
+      "event_category": "Basketball",
+      "start_time": "2022-12-17 20:00:00",
+      "end_time": "2022-12-17 22:00:00"
+    },
+    {
+      "id": "31",
+      "event_name": "Men Baseball",
+      "event_category": "Baseball",
+      "start_time": "2022-12-17 19:00:00",
+      "end_time": "2022-12-17 20:00:00"
+    },
+    {
+      "id": "32",
+      "event_name": "Women Baseball",
+      "event_category": "Baseball",
+      "start_time": "2022-12-17 20:00:00",
+      "end_time": "2022-12-17 22:00:00"
+    }
+  ]
+}
