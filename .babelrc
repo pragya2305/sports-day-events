@@ -1,0 +1,18 @@
+{ 
+    "plugins": [
+      ["module-resolver", {
+        "alias": {
+          "@components": "./src/components",
+          "@enums": "./src/enums",
+          "@error-boundary":"./src/error-boundary",
+          "@helpers": "./src/helpers",
+          "@layout":"./src/layout",
+          "@redux":"./src/redux",
+          "@routing":"./src/routing",
+          "@screens":"./src/screens",
+          "@constants":"./src/constants"
+        }
+      }]
+    ]
+  
+}
