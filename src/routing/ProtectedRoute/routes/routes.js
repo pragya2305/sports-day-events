@@ -1,7 +1,7 @@
 import React from "react";
-import { URL } from "../../../enums";
+import { URL } from "@constants";
 
-const Dashboard = React.lazy(() => import("../../../screens/Dashboard"));
+const Dashboard = React.lazy(() => import("@screens/Dashboard"));
 
 const routes = [
   {

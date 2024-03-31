@@ -1,5 +1,5 @@
 const getUserEvents = {
-  query: (where) => {
+  query: () => {
     return {
       url: "/user-events",
       method: "GET",

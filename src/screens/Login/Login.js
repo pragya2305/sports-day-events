@@ -6,20 +6,16 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { useNavigate } from "react-router-dom";
-import { useAuthSlice } from "@redux/slice";
-import { URL, AUTH_STATUS } from "@enums";
+import { useLoginService } from "@redux/service";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-  const { setUserAuthStatus } = useAuthSlice();
+  const { doLogin, loading, error } = useLoginService();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // handle authentication api call
-    setUserAuthStatus(AUTH_STATUS.AUTHORIZED);
-    navigate(URL.DASHBOARD);
+    doLogin(username, password);
   };
 
   return (
@@ -39,6 +35,17 @@ const Login = () => {
           Login
         </Typography>
         <Box component='form' onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          {error && (
+            <Typography
+              variant='body2'
+              gutterBottom
+              bgcolor='red'
+              align='center'
+              color='white'
+            >
+              {error}
+            </Typography>
+          )}
           <TextField
             margin='normal'
             required
@@ -68,9 +75,9 @@ const Login = () => {
             fullWidth
             variant='contained'
             sx={{ mt: 3, mb: 2 }}
-            disabled={!username || !password}
+            disabled={!username || !password || loading}
           >
-            Login
+            {loading ? "Logging in..." : "Login"}
           </Button>
         </Box>
       </Box>

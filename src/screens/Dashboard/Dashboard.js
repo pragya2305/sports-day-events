@@ -2,7 +2,7 @@ import React from "react";
 import { SplitScreen } from "@components";
 import { useGetUserEventsQuery } from "@redux/api/events/api";
 import EventsList from "./EventsList";
-import { EVENT_LIST_TYPE } from "@enums";
+import { EVENT_LIST_TYPE } from "@constants";
 import {
   useRemoveEventService,
   useAddEventService,

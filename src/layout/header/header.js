@@ -1,16 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { useAuthSlice } from "../../redux/slice";
-import { AUTH_STATUS, URL } from "../../enums";
+import { useLogoutService } from "@redux/service";
 
 const Header = () => {
-  const { setUserAuthStatus } = useAuthSlice();
-  const navigate = useNavigate();
-  const handleLogout = useCallback(() => {
-    setUserAuthStatus(AUTH_STATUS.UNAUTHORIZED);
-    navigate(URL.LOGOUT);
-  }, [navigate, setUserAuthStatus]);
+  const { logoutUser, isLoading } = useLogoutService();
 
   return (
     <AppBar position='static'>
@@ -18,8 +11,8 @@ const Header = () => {
         <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
           Sports Day Events
         </Typography>
-        <Button color='inherit' onClick={handleLogout}>
-          Logout
+        <Button color='inherit' onClick={logoutUser} disabled={isLoading}>
+          {isLoading ? "Logging Out" : "Logout"}
         </Button>
       </Toolbar>
     </AppBar>

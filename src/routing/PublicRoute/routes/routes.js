@@ -1,5 +1,5 @@
 import React from "react";
-import { URL } from "@enums";
+import { URL } from "@constants";
 import Layout from "@layout";
 
 const Login = React.lazy(() => import("@screens/Login"));

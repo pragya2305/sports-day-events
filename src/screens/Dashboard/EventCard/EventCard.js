@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { format } from "date-fns";
-import { DATE_FORMAT } from "@enums";
+import { DATE_FORMAT } from "@constants";
 import styles from "./EventCard.css";
 
 const EventCard = ({ item, type, actionfn, disableAction }) => {

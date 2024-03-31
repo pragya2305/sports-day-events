@@ -3,7 +3,6 @@
       ["module-resolver", {
         "alias": {
           "@components": "./src/components",
-          "@enums": "./src/enums",
           "@error-boundary":"./src/error-boundary",
           "@helpers": "./src/helpers",
           "@layout":"./src/layout",

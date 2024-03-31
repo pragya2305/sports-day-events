@@ -14,7 +14,7 @@ export class ErrorBoundary extends React.Component {
   }
 
   render() {
-    if (this.state.hasError) {
+    if (this.state.error) {
       return (
         <Box
           sx={{
@@ -24,8 +24,12 @@ export class ErrorBoundary extends React.Component {
             alignItems: "center",
           }}
         >
-          <Typography variant='h3'>Something went wrong.</Typography>
-          <Typography variant='h5'>Please try again.</Typography>
+          <Typography variant='h4' component='h4'>
+            Something went wrong.
+          </Typography>
+          <Typography variant='h5' component='h5'>
+            Please try again.
+          </Typography>
         </Box>
       );
     }

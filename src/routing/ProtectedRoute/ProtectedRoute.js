@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
-import { URL } from "../../enums";
+import { URL } from "@constants";
 import routes from "./routes";
-import Layout from "../../layout";
-import Loader from "../../components/Loader";
+import Layout from "@layout";
+import { Loader } from "@components";
 
 const ProtectedRoute = () => {
   const location = useLocation();

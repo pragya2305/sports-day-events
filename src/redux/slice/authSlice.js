@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { AUTH_STATUS } from "../../enums";
+import { AUTH_STATUS } from "@constants";
 
 const initialState = {
-  // userName: null,
+  userId: null,
   userAuthStatus: AUTH_STATUS.UNAUTHORIZED,
 };
 
@@ -11,25 +11,25 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    // setUserName: (state, action) => {
-    //   state.userName = action.payload;
-    // },
+    setUserId: (state, action) => {
+      state.userId = action.payload;
+    },
     setUserAuthStatus: (state, action) => {
       state.userAuthStatus = action.payload;
     },
   },
 });
 
-const { setUserAuthStatus } = authSlice.actions;
+const { setUserAuthStatus, setUserId } = authSlice.actions;
 
 export const useAuthSlice = () => {
   const dispatch = useDispatch();
-  // const userName = useSelector((state) => state.auth.userName);
+  const userId = useSelector((state) => state.auth.userId);
   const userAuthStatus = useSelector((state) => state.auth.userAuthStatus);
   return {
-    // userName,
+    userId,
     userAuthStatus,
-    // setUserName: (userName) => dispatch(setUserName(userName)),
+    setUserId: (userId) => dispatch(setUserId(userId)),
     setUserAuthStatus: (userAuthStatus) =>
       dispatch(setUserAuthStatus(userAuthStatus)),
   };

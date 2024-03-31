@@ -6,9 +6,7 @@ import {
 } from "../api/events/api";
 import { timeConflict, infinityScroll } from "@helpers";
 import { useEventsSlice } from "@redux/slice";
-import { MODAL_TYPE, TOAST_TYPE } from "@enums";
-import { EVENTS_LIMIT } from "@constants";
-import { PAGE_LIMIT } from "@constants";
+import { MODAL_TYPE, TOAST_TYPE, PAGE_LIMIT, EVENTS_LIMIT } from "@constants";
 
 export const useGetAllEventsService = () => {
   const { allEventsPageNo } = useEventsSlice();

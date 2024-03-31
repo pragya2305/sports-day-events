@@ -1,5 +1,5 @@
 import React from "react";
-import AUTH_STATUS from "../enums/auth-status";
+import { AUTH_STATUS } from "@constants";
 import PublicRoute from "./PublicRoute";
 import ProtectedRoute from "./ProtectedRoute";
 import { useAuthSlice } from "../redux/slice";
