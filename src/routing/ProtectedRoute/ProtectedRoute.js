@@ -1,24 +1,20 @@
-import React, { Suspense } from "react";
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
-import { URL } from "@constants";
-import routes from "./routes";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { AUTH_STATUS, URL } from "@constants";
 import Layout from "@layout";
-import { Loader } from "@components";
+import { useAuthSlice } from "@redux/slice";
 
-const ProtectedRoute = () => {
-  const location = useLocation();
-  return (
-    <Layout>
-      <Suspense fallback={<Loader />}>
-        <Routes location={location}>
-          {routes.map((routeConfig) => (
-            <Route {...routeConfig} key={routeConfig.path} />
-          ))}
-          <Route path='*' element={<Navigate to={URL.DASHBOARD} />} />
-        </Routes>
-      </Suspense>
-    </Layout>
-  );
+const ProtectedRoute = ({ children }) => {
+  const { userAuthStatus } = useAuthSlice();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (userAuthStatus !== AUTH_STATUS.AUTHORIZED) {
+      navigate(URL.LOGIN, { replace: true });
+    }
+  }, [navigate, userAuthStatus]);
+
+  return <Layout>{children}</Layout>;
 };
 
 export default ProtectedRoute;

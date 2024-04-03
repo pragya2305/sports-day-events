@@ -1,9 +1,8 @@
 import React from "react";
 import { URL } from "@constants";
-import Layout from "@layout";
+import ProtectedRoute from "../ProtectedRoute";
 
 const Login = React.lazy(() => import("@screens/Login"));
-const Logout = React.lazy(() => import("@screens/Logout"));
 const Dashboard = React.lazy(() => import("@screens/Dashboard"));
 
 const routes = [
@@ -13,16 +12,11 @@ const routes = [
     element: <Login />,
   },
   {
-    path: URL.LOGOUT,
-    element: <Logout />,
-    exact: true,
-  },
-  {
     path: URL.DASHBOARD,
     element: (
-      <Layout>
+      <ProtectedRoute>
         <Dashboard />
-      </Layout>
+      </ProtectedRoute>
     ),
     exact: true,
   },

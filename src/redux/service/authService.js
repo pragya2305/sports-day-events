@@ -11,11 +11,11 @@ export const useLoginService = () => {
   const [login, { isLoading }] = useLoginMutation();
   const doLogin = async (username, password) => {
     try {
-      const payload = { id: username, userId: username, password };
+      const payload = { id: username, password };
       await login(payload).unwrap();
       setUserId(username);
-      setUserAuthStatus(AUTH_STATUS.AUTHORIZED);
       navigate(URL.DASHBOARD);
+      setUserAuthStatus(AUTH_STATUS.AUTHORIZED);
     } catch (err) {
       setError("Username or password is incorrect");
     }
@@ -25,13 +25,12 @@ export const useLoginService = () => {
 
 export const useLogoutService = () => {
   const navigate = useNavigate();
-  const { setUserAuthStatus } = useAuthSlice();
-  const { userId } = useAuthSlice();
+  const { setUserAuthStatus, userId } = useAuthSlice();
   const [logout, { isLoading }] = useLogoutMutation();
   const logoutUser = async () => {
     await logout({ id: userId }).unwrap();
     setUserAuthStatus(AUTH_STATUS.UNAUTHORIZED);
-    navigate(URL.LOGOUT);
+    navigate(URL.LOGIN);
   };
   return { logoutUser, isLoading };
 };

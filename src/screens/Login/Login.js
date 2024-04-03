@@ -16,6 +16,8 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     doLogin(username, password);
+    setUsername("");
+    setPassword("");
   };
 
   return (

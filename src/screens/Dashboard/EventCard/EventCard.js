@@ -3,18 +3,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
-import { format } from "date-fns";
-import { DATE_FORMAT } from "@constants";
+import { formatDate } from "@helpers";
 import styles from "./EventCard.css";
 
 const EventCard = ({ item, type, actionfn, disableAction }) => {
   const { event_name, event_category, start_time, end_time } = item;
-
-  const formattedStartTime = format(
-    start_time,
-    DATE_FORMAT.MONTH_DAY_HOUR_MINUTE
-  );
-  const formattedEndTime = format(end_time, DATE_FORMAT.MONTH_DAY_HOUR_MINUTE);
 
   return (
     <Card
@@ -32,7 +25,7 @@ const EventCard = ({ item, type, actionfn, disableAction }) => {
           {event_category}
         </Typography>
         <Typography variant='body2' className={styles.dateRange}>
-          {`${formattedStartTime} - ${formattedEndTime}`}
+          {formatDate(start_time, end_time)}
         </Typography>
       </CardContent>
       <div
@@ -40,11 +33,11 @@ const EventCard = ({ item, type, actionfn, disableAction }) => {
       >
         <Button
           variant='contained'
-          color={type.buttonColor}
+          color={type?.buttonColor}
           onClick={() => actionfn(item)}
           disabled={disableAction}
         >
-          {type.buttonText}
+          {type?.buttonText}
         </Button>
       </div>
     </Card>

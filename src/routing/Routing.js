@@ -1,21 +1,20 @@
-import React from "react";
-import { AUTH_STATUS } from "@constants";
-import PublicRoute from "./PublicRoute";
-import ProtectedRoute from "./ProtectedRoute";
-import { useAuthSlice } from "../redux/slice";
+import React, { Suspense } from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import { URL } from "@constants";
+import routes from "./routes";
+import { Loader } from "@components";
 
 const Routing = () => {
-  const { userAuthStatus } = useAuthSlice();
-  switch (userAuthStatus) {
-    case AUTH_STATUS.AUTHORIZED: {
-      return <ProtectedRoute />;
-    }
-    case AUTH_STATUS.UNAUTHORIZED: {
-      return <PublicRoute />;
-    }
-    default:
-      return null;
-  }
+  return (
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        {routes.map((routeConfig) => (
+          <Route {...routeConfig} key={routeConfig.path} />
+        ))}
+        <Route path='*' element={<Navigate to={URL.LOGIN} replace />} />
+      </Routes>
+    </Suspense>
+  );
 };
 
 export default Routing;
